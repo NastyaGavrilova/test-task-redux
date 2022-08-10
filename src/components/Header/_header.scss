@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+.c-header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: $c-white;
+  &__wrapper {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 13px 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__buttons {
+    max-width: 210px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+.c-get-users {
+  &__wrapper {
+    max-width: 1170px;
+    width: 100%;
+    padding: 140px 0;
+  }
+  &__header {
+    margin-bottom: 50px;
+  }
+  &__title {
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: $c-black87;
+  }
+  &__users {
+    display: grid;
+    grid-template-columns: 370px 370px 370px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+  }
+}

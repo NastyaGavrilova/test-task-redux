@@ -1,0 +1,36 @@
+@import "../../../styles/variables";
+.c-user-card {
+  max-width: 370px;
+  width: 100%;
+  background-color: $c-white;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  &__wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__header {
+    margin-bottom: 20px;
+  }
+  &__photo {
+    max-width: 70px;
+    width: 100%;
+    border-radius: 50%;
+  }
+  &__name,
+  &__position,
+  &__email,
+  &__phone {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $c-black87;
+    text-align: center;
+  }
+  &__name {
+    margin-bottom: 20px;
+  }
+}
