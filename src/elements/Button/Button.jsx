@@ -4,9 +4,14 @@ import "./_button.scss";
 class Button extends Component {
   render() {
     return (
-      <button className="e-button" onClick={this.props.onClick}>
+      <a
+        id={this.props.id}
+        className="e-button"
+        onClick={this.props.onClick}
+        href={this.props.href}
+      >
         {this.props.children}
-      </button>
+      </a>
     );
   }
 }

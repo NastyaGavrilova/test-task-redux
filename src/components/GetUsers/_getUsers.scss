@@ -26,4 +26,64 @@
     display: flex;
     justify-content: center;
   }
+  &__btnn {
+    background: $c-primary;
+    color: rgba(0, 0, 0, 0.87);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 4px 23px;
+    border-radius: 80px;
+    border: none;
+    cursor: pointer;
+    transition: $t-transition;
+  }
+  &__btnn:hover {
+    background: $c-disabled;
+    color: $c-white;
+  }
+  &__hide-btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .c-get-users {
+    &__users {
+      max-width: 904px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 282px 282px 282px;
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .c-get-users {
+    &__users {
+      max-width: 704px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 344px 344px;
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-get-users {
+    &__users {
+      max-width: 704px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 328px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+  }
 }

@@ -9,6 +9,7 @@ const FETCH_USERS = "FETCH_USERS";
 const FETCH_USERS_SUCCESS = "FETCH_USERS_SUCCESS";
 const FETCH_USERS_ERROR = "FETCH_USERS_ERROR";
 const SET_USERS_PAGE = "SET_USERS_PAGE";
+const SET_USERS_PAGE_NULL = "SET_USERS_PAGE_NULL";
 
 export const userReducer = (state = defaultState, action) => {
   switch (action.type) {
@@ -28,6 +29,13 @@ export const userReducer = (state = defaultState, action) => {
         ...state,
         page: action.payload,
       };
+    case SET_USERS_PAGE_NULL:
+      return {
+        ...state,
+        error: action.payload,
+        loading: false,
+        page: null,
+      };
     default:
       return state;
   }
@@ -43,5 +51,9 @@ export const fetchUsersErrorAction = (payload) => ({
 });
 export const fetchUsersPageAction = (payload) => ({
   type: SET_USERS_PAGE,
+  payload,
+});
+export const fetchUsersPageNullAction = (payload) => ({
+  type: SET_USERS_PAGE_NULL,
   payload,
 });

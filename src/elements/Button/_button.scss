@@ -11,4 +11,10 @@
   border-radius: 80px;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  transition: $t-transition;
+}
+.e-button:hover {
+  background: $c-disabled;
+  color: $c-white;
 }

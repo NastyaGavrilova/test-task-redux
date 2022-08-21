@@ -34,3 +34,9 @@
     margin-bottom: 20px;
   }
 }
+@media screen and (max-width: 1024px) {
+  .c-user-card {
+    max-width: 382px;
+    width: 100%;
+  }
+}

@@ -11,8 +11,8 @@ class Header extends Component {
             <img className="c-header__logo-img" alt="logo" src={logo}></img>
           </div>
           <div className="c-header__buttons">
-            <Button children="Users" />
-            <Button children="Sign Up" />
+            <Button children="Users" href="#get-users" />
+            <Button children="Sign Up" href="#sign-up" />
           </div>
         </div>
       </header>

@@ -4,6 +4,7 @@ import {
   fetchUsersSuccessAction,
   fetchUsersErrorAction,
   fetchUsersPageAction,
+  fetchUsersPageNullAction,
 } from "../reducers/userReducers";
 
 // export const fetchUsers = () => {
@@ -16,18 +17,19 @@ import {
 //   };
 // };
 
-export const fetchUsers = (page = 1) => {
+export const fetchUsers = (page = 1, btnHide) => {
   return async (dispatch) => {
     try {
       dispatch(fetchUsersAction);
       const response = await axios.get(
         `https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${page}&count=6`
       );
-      setTimeout(() => {
-        dispatch(fetchUsersSuccessAction(response.data));
-      }, 500);
       // dispatch(fetchUsersSuccessAction(response.data));
-      console.log(response.data.links.next_url);
+      if (response.data.links.next_url !== null) {
+        dispatch(fetchUsersSuccessAction(response.data));
+      } else {
+        dispatch(fetchUsersPageNullAction(btnHide));
+      }
     } catch (e) {
       dispatch(
         fetchUsersErrorAction("Произошла ошибка при загрузке пользователей")

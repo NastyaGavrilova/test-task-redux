@@ -1,0 +1,204 @@
+@import "../../styles/variables";
+.c-post-user {
+  &__wrapper {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 0 100px 0;
+  }
+  &__header {
+    margin-bottom: 50px;
+  }
+  &__title {
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: $c-black87;
+  }
+  &__form {
+    margin: 0 auto;
+    max-width: 380px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__form-group {
+    max-width: 380px;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  &__input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d0cfcf;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $c-black87;
+  }
+  &__error {
+    width: 100%;
+    border: 2px solid $c-error;
+    border-radius: 4px;
+    padding: 14px 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $c-black87;
+    &--text {
+      margin-top: 4px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: $c-error;
+    }
+  }
+  &__position-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $c-black87;
+    margin-bottom: 10px;
+  }
+  &__postion-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  &__position-label {
+    display: flex;
+  }
+  &__position-radio-btn-hide {
+    height: 0;
+    opacity: 0;
+    position: relative;
+    width: 0;
+  }
+  &__position-radio-btn {
+    border: 1px solid #d0cfcf;
+    border-radius: 50%;
+    height: 20px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 20px;
+    z-index: 3;
+    cursor: pointer;
+    margin-right: 12px;
+  }
+  &__position-radio-btn-checked {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 4px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+  }
+  &__position-label:hover input ~ &__position-radio-btn {
+    border: 1px solid $c-secondary;
+  }
+  &__position-label:hover
+    input
+    ~ &__position-radio-btn
+    > &__position-radio-btn-checked {
+    background-color: $c-secondary;
+  }
+
+  &__position-label input:checked ~ &__position-radio-btn {
+    border: 1px solid $c-secondary;
+  }
+  &__position-label
+    input:checked
+    ~ &__position-radio-btn
+    > &__position-radio-btn-checked {
+    background-color: $c-secondary;
+  }
+  &__upload-group {
+    display: flex;
+  }
+  &__upload-btn {
+    background-color: $c-background;
+    max-width: 83px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.87);
+    border-radius: 4px 0px 0px 4px;
+    padding: 14px 15px;
+    cursor: pointer;
+  }
+  &__error-upload-btn {
+    background-color: $c-background;
+    max-width: 83px;
+    width: 100%;
+    border: 2px solid $c-error;
+    border-radius: 4px 0px 0px 4px;
+    padding: 14px 15px;
+    cursor: pointer;
+  }
+  &__uploaded-photo {
+    border: 1px solid #d0cfcf;
+    border-radius: 0px 4px 4px 0px;
+    max-width: 297px;
+    width: 100%;
+    padding: 14px 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #7e7e7e;
+    background-color: $c-background;
+  }
+  &__error-uploaded-photo {
+    border-top: 2px solid $c-error;
+    border-right: 2px solid $c-error;
+    border-bottom: 2px solid $c-error;
+    border-left: 0px solid $c-error;
+    border-radius: 0px 4px 4px 0px;
+    max-width: 297px;
+    width: 100%;
+    padding: 14px 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #7e7e7e;
+    background-color: $c-background;
+  }
+  &__success {
+    max-width: 328px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__success-img {
+    max-width: 328px;
+    width: 100%;
+  }
+  &__submit {
+    background: $c-disabled;
+    color: $c-white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 4px 23px;
+    border-radius: 80px;
+    border: none;
+    cursor: pointer;
+    transition: $t-transition;
+  }
+  &__submit:hover {
+    background: $c-primary;
+    color: $c-black87;
+  }
+}

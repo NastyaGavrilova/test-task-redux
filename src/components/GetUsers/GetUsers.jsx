@@ -6,17 +6,21 @@ import UserCard from "./UserCard/UserCard";
 import Button from "../../elements/Button/Button";
 const GetUsers = () => {
   const { users, error, loading, page } = useSelector((state) => state.users);
-  console.log(users);
   const [count, setCount] = useState(1);
+  const [hideBtn, setHideBtn] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchUsers(page));
+    dispatch(fetchUsers(page, hideBtn));
+    console.log(page + 1);
     setCount(count + 1);
+    if (page === null) {
+      setHideBtn(!hideBtn);
+    }
   }, [page]);
-  if (loading) return <h1 className="c-get-users__title"> Идет загрузка...</h1>;
-  if (error) return <h1 className="c-get-users__title">{error}</h1>;
+  // if (loading) return <h1 className="c-get-users__title"> Идет загрузка...</h1>;
+  // if (error) return <h1 className="c-get-users__title">{error}</h1>;
   return (
-    <section className="c-get-users">
+    <section className="c-get-users" id="get-users">
       <div className="c-get-users__wrapper">
         <div className="c-get-users__header">
           <h3 className="c-get-users__title">Working with GET request</h3>
@@ -34,7 +38,11 @@ const GetUsers = () => {
           ))}
         </div>
         <div className="c-get-users__btn">
-          <Button
+          <button
+            className={
+              hideBtn === false ? "c-get-users__btnn" : "c-get-users__hide-btn"
+            }
+            // className="c-get-users__btnn"
             children={"Show More"}
             onClick={() => dispatch(setUsersPage(count))}
           />

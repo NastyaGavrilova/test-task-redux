@@ -24,7 +24,7 @@ class Banner extends Component {
                 />
               </div>
             </div>
-            <Button children="Sign Up" />
+            <Button children="Sign Up" href="#sign-up" />
           </div>
         </div>
       </section>
